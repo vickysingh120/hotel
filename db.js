@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 require('dotenv').config();
 // const mongo_url="mongodb://localhost:27017/project1";
-const mongo_url=process.env.MONGODB_URL;
+const mongo_url="mongodb+srv://vicky_db1:vicky123@vickydb.ufsfz6n.mongodb.net/project1";
 
 mongoose.connect(mongo_url,{
 //    useNewUrlParser:true, 

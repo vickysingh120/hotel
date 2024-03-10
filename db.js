@@ -1,9 +1,10 @@
 const mongoose=require('mongoose');
-
-const mongo_url="mongodb://localhost:27017/project1";
+require('dotenv').config();
+// const mongo_url="mongodb://localhost:27017/project1";
+const mongo_url=process.env.MONGODB_URL;
 
 mongoose.connect(mongo_url,{
-//    useNewUrlParser:true,
+//    useNewUrlParser:true, 
 //    useUnifiedTopology:true 
 });
 

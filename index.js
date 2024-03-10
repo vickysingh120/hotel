@@ -1,6 +1,6 @@
 const express=require('express');
 const db=require('./db');
-
+require('dotenv').config();
 const app=express();
 
 // for ready json data in post request
@@ -22,6 +22,7 @@ const menuItemRoutes=require('./routes/menuItemRoutes');
 app.use('/person',personRoutes);
 app.use('/menuitem',menuItemRoutes);
 
-app.listen(3000,()=>{
-    console.log(`Server is listening at port 3000`);
+const PORT=process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log(`Server is listening at port ${PORT}`);
 });
